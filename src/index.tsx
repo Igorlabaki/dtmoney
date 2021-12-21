@@ -24,7 +24,7 @@ createServer({
        {
         id:2,
         title:    'Casa',
-        type:     'deposit',
+        type:     'withdraw',
         category: 'Aluguel',
         amount:   450,
         createdAt: new Date('2021-02-12 09:00:00')
@@ -38,7 +38,6 @@ createServer({
 
     this.get('/transactions', () => {
       return this.schema.all('transaction')
-
     })
 
     this.post('/transactions', (schema,request) => {
